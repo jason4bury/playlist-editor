@@ -1,0 +1,18 @@
+services:
+  playlist-editor:
+    build: .
+    image: playlist-editor:latest
+    container_name: playlist-editor
+    ports:
+      - "3000:3000"
+    volumes:
+      - playlist-data:/app/data
+    restart: unless-stopped
+    # A login screen is required by default. CHANGE THIS before you run it —
+    # anyone with this password can use the app. Set to an empty string
+    # ("") to disable the login screen entirely.
+    environment:
+      - APP_PASSWORD=changeme
+
+volumes:
+  playlist-data:

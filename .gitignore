@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Runtime data (playlists, uploaded audio, cover art) — this is generated
+# at runtime and lives in a Docker volume; it doesn't belong in the repo.
+data/*
+!data/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Env files if you ever add one instead of docker-compose's inline value
+.env
